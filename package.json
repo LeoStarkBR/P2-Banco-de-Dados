@@ -1,0 +1,15 @@
+{
+  "name": "avaliacao2-bd",
+  "version": "1.0.0",
+  "description": "Trabalho BD II - CRUD MongoDB com Express",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "seed": "node backend/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3"
+  }
+}

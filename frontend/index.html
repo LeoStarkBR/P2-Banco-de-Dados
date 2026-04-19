@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliacao2 — Coleção Alunos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>BD II — Avaliacao2</h1>
+    <p>Banco: <strong>Avaliacao2</strong> &nbsp;|&nbsp; Coleção: <strong>Alunos</strong></p>
+  </header>
+
+  <!-- ===== INSERT ===== -->
+  <section class="card" id="sec-insert">
+    <h2>INSERT — Cadastrar Aluno</h2>
+    <form id="formInsert">
+      <div class="form-row">
+        <input type="text" id="nome"     placeholder="Nome completo" required>
+        <input type="text" id="id_aluno" placeholder="ID / Matrícula" required>
+        <input type="text" id="telefone" placeholder="Telefone">
+        <input type="text" id="curso"    placeholder="Curso">
+        <input type="text" id="endereco" placeholder="Endereço">
+        <button type="submit">Inserir</button>
+      </div>
+    </form>
+    <p class="msg" id="msgInsert"></p>
+  </section>
+
+  <!-- ===== SELECT ===== -->
+  <section class="card" id="sec-select">
+    <h2>SELECT — Pesquisar Alunos</h2>
+    <div class="form-row">
+      <input type="text" id="busca" placeholder="Filtrar por nome (vazio = todos)">
+      <button onclick="buscarAlunos()">Buscar</button>
+    </div>
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>ID</th>
+          <th>Telefone</th>
+          <th>Curso</th>
+          <th>Endereço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela">
+        <tr><td colspan="6" class="vazio">Nenhum dado carregado.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== UPDATE ===== -->
+  <section class="card" id="sec-update">
+    <h2>UPDATE — Atualizar Registro</h2>
+    <p class="hint">Clique em <strong>Editar</strong> em qualquer linha da tabela para preencher este formulário.</p>
+    <form id="formUpdate">
+      <input type="hidden" id="update_mongoid">
+      <div class="form-row">
+        <input type="text" id="update_nome"     placeholder="Nome">
+        <input type="text" id="update_id"       placeholder="ID / Matrícula" disabled>
+        <input type="text" id="update_telefone" placeholder="Telefone">
+        <input type="text" id="update_curso"    placeholder="Curso">
+        <input type="text" id="update_endereco" placeholder="Endereço">
+        <button type="submit">Salvar Atualização</button>
+      </div>
+    </form>
+    <p class="msg" id="msgUpdate"></p>
+  </section>
+
+  <!-- ===== DELETE ===== -->
+  <section class="card" id="sec-delete">
+    <h2>DELETE — Excluir Registro</h2>
+    <p class="hint">Clique em <strong>Excluir</strong> em qualquer linha da tabela acima.<br>
+    Para excluir o professor, filtre por <em>"Prof"</em> no campo de busca.</p>
+    <p class="msg" id="msgDelete"></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
