@@ -42,7 +42,7 @@ http://localhost:3000
 | **INSERT** | Rodar `npm run seed` no terminal | "5 documentos inseridos na coleção Alunos" |
 | **SELECT** | Abrir `localhost:3000`, clicar **Buscar** | Tabela com todos os registros |
 | **UPDATE** | Clicar **Editar** em qualquer linha, alterar o telefone, salvar | "Atualizado com sucesso!" |
-| **DELETE** | Filtrar por "Prof" no SELECT, clicar **Excluir** no Prof. Gustavo | "Prof. Gustavo excluído com sucesso!" |
+| **DELETE** | Filtrar por "Prof" no SELECT, clicar **Excluir** no  Gustavo | "Gustavo excluído com sucesso!" |
 
 ## Integrantes
 
